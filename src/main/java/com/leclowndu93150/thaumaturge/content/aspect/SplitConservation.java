@@ -130,7 +130,7 @@ final class SplitConservation {
         } catch (RuntimeException e) {
             return Optional.empty();
         }
-        if (output.isEmpty() || ingredients.isEmpty()) {
+        if (output == null || output.isEmpty() || ingredients.isEmpty()) {
             return Optional.empty();
         }
         Item input = RecipeAspectDerivation.representativeStack(ingredients.getFirst()).getItem();
